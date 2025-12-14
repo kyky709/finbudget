@@ -11,7 +11,7 @@ export function Pricing() {
   const [isAnnual, setIsAnnual] = useState(false);
 
   return (
-    <section id="pricing" className="py-24 bg-slate-50 dark:bg-slate-900/50">
+    <section id="pricing" className="py-24 bg-slate-50 dark:bg-slate-900/50 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -53,6 +53,23 @@ export function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1 }}
+              // Pulse animation for Pro card
+              animate={
+                plan.popular
+                  ? {
+                      scale: [1, 1.02, 1],
+                    }
+                  : undefined
+              }
+              {...(plan.popular && {
+                transition: {
+                  scale: {
+                    repeat: Infinity,
+                    duration: 2,
+                    ease: "easeInOut",
+                  },
+                },
+              })}
               className={cn(
                 "relative",
                 plan.popular && "md:-mt-4 md:mb-4"

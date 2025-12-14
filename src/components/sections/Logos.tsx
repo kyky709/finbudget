@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import { trustLogos } from "@/lib/constants";
 
 export function Logos() {
+  // Double the logos for infinite scroll effect
+  const duplicatedLogos = [...trustLogos, ...trustLogos];
+
   return (
-    <section className="py-16 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+    <section className="py-16 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.p
           initial={{ opacity: 0 }}
@@ -16,7 +19,8 @@ export function Logos() {
           Ils parlent de nous
         </motion.p>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        {/* Desktop: Static display */}
+        <div className="hidden md:flex flex-wrap justify-center items-center gap-8 md:gap-16">
           {trustLogos.map((logo, index) => (
             <motion.div
               key={logo}
@@ -32,6 +36,33 @@ export function Logos() {
               </span>
             </motion.div>
           ))}
+        </div>
+
+        {/* Mobile: Infinite horizontal carousel */}
+        <div className="md:hidden relative">
+          <motion.div
+            className="flex gap-12 whitespace-nowrap"
+            animate={{
+              x: [0, -50 * trustLogos.length],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 20,
+                ease: "linear",
+              },
+            }}
+          >
+            {duplicatedLogos.map((logo, index) => (
+              <span
+                key={`${logo}-${index}`}
+                className="text-xl font-bold text-slate-400 dark:text-slate-500 opacity-50 flex-shrink-0"
+              >
+                {logo}
+              </span>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

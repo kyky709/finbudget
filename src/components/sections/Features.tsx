@@ -26,7 +26,7 @@ const itemVariants = {
 
 export function Features() {
   return (
-    <section id="features" className="py-24 bg-slate-50 dark:bg-slate-900/50">
+    <section id="features" className="py-24 bg-slate-50 dark:bg-slate-900/50 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div

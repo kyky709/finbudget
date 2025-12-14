@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-24 bg-white dark:bg-slate-900">
+    <section id="faq" className="py-24 bg-white dark:bg-slate-900 scroll-mt-20">
       <div className="max-w-3xl mx-auto px-6">
         {/* Header */}
         <motion.div
