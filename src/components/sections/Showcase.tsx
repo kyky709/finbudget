@@ -32,7 +32,7 @@ export function Showcase() {
         >
           <Badge className="mb-4">Découvrir l'app</Badge>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-slate-900 dark:text-white"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             Une interface{" "}

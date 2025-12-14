@@ -17,7 +17,7 @@ export function HowItWorks() {
         >
           <Badge className="mb-4">Simple et rapide</Badge>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-slate-900 dark:text-white"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             Comment ça marche ?
@@ -46,7 +46,7 @@ export function HowItWorks() {
                 <div className="relative z-10 w-12 h-12 mx-auto mb-6 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-emerald-500/30">
                   {step.number}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-white">{step.title}</h3>
                 <p className="text-slate-600 dark:text-slate-400 text-sm">
                   {step.description}
                 </p>
@@ -74,7 +74,7 @@ export function HowItWorks() {
                 <div className="absolute left-0 w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-emerald-500/30">
                   {step.number}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-white">{step.title}</h3>
                 <p className="text-slate-600 dark:text-slate-400">
                   {step.description}
                 </p>

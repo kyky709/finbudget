@@ -20,7 +20,7 @@ export function FAQ() {
         >
           <Badge className="mb-4">FAQ</Badge>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-slate-900 dark:text-white"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             Questions{" "}
@@ -44,7 +44,7 @@ export function FAQ() {
                 value={`item-${index}`}
                 className="bg-slate-50 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700"
               >
-                <Accordion.Trigger className="w-full flex items-center justify-between px-6 py-4 text-left font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors group">
+                <Accordion.Trigger className="w-full flex items-center justify-between px-6 py-4 text-left font-medium text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-colors group">
                   <span>{item.question}</span>
                   <ChevronDown className="w-5 h-5 text-slate-400 transition-transform duration-300 group-data-[state=open]:rotate-180" />
                 </Accordion.Trigger>

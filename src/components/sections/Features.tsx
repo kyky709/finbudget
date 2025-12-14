@@ -37,7 +37,7 @@ export function Features() {
         >
           <Badge className="mb-4">Fonctionnalités</Badge>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-slate-900 dark:text-white"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             Tout ce dont vous avez besoin pour{" "}
@@ -63,7 +63,7 @@ export function Features() {
                 <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-white">{feature.title}</h3>
                 <p className="text-slate-600 dark:text-slate-400">
                   {feature.description}
                 </p>

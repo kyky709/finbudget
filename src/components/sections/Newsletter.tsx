@@ -56,7 +56,7 @@ export function Newsletter() {
           viewport={{ once: true, margin: "-100px" }}
         >
           <Badge className="mb-4">Newsletter</Badge>
-          <h2 className="text-2xl font-bold mb-2">
+          <h2 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">
             Restez informé
           </h2>
           <p className="text-slate-600 dark:text-slate-400 mb-6">

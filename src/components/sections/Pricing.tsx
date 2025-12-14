@@ -22,7 +22,7 @@ export function Pricing() {
         >
           <Badge className="mb-4">Tarifs</Badge>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-slate-900 dark:text-white"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             Choisissez votre{" "}
@@ -92,7 +92,7 @@ export function Pricing() {
               >
                 {/* Plan Header */}
                 <div className="text-center mb-6">
-                  <h3 className="text-xl font-semibold mb-2">{plan.name}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-white">{plan.name}</h3>
                   <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
                     {plan.description}
                   </p>
@@ -101,7 +101,7 @@ export function Pricing() {
                       key={isAnnual ? "annual" : "monthly"}
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="text-4xl font-bold"
+                      className="text-4xl font-bold text-slate-900 dark:text-white"
                       style={{ fontFamily: "var(--font-space-grotesk)" }}
                     >
                       {isAnnual

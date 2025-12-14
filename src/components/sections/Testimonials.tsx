@@ -58,7 +58,7 @@ export function Testimonials() {
         >
           <Badge className="mb-4">Témoignages</Badge>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-slate-900 dark:text-white"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             Ce que nos utilisateurs{" "}
@@ -113,7 +113,7 @@ export function Testimonials() {
               className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
               aria-label="Témoignage précédent"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-5 h-5 text-slate-700 dark:text-slate-300" />
             </button>
 
             {/* Dots */}
@@ -137,7 +137,7 @@ export function Testimonials() {
               className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
               aria-label="Témoignage suivant"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-5 h-5 text-slate-700 dark:text-slate-300" />
             </button>
           </div>
         </div>
