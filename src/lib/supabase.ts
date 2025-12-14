@@ -1,11 +1,20 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Create client only if env vars are available
+export const supabase: SupabaseClient | null =
+  supabaseUrl && supabaseAnonKey
+    ? createClient(supabaseUrl, supabaseAnonKey)
+    : null;
 
 export async function subscribeToNewsletter(email: string): Promise<{ success: boolean; message: string }> {
+  if (!supabase) {
+    console.warn("Supabase not configured - newsletter subscription disabled");
+    return { success: false, message: "Service temporairement indisponible." };
+  }
+
   try {
     const { error } = await supabase
       .from("newsletter_subscribers")

@@ -16,6 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://finbudget.fr"),
   title: "FinBudget - Application de Gestion de Budget Personnel",
   description:
     "Maîtrisez vos finances et simplifiez votre vie avec FinBudget. Suivez vos dépenses, fixez des budgets intelligents et atteignez vos objectifs financiers.",
