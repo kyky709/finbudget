@@ -177,7 +177,3 @@ Ce projet est destiné à un usage de démonstration dans un portfolio.
 <p align="center">
   Développé par <a href="https://github.com/kyky709">kyky709</a>
 </p>
-
-<p align="center">
-  🤖 Généré avec <a href="https://claude.com/claude-code">Claude Code</a>
-</p>
